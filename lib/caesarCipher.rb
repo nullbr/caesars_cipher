@@ -1,6 +1,9 @@
 class CaesarCipher
+  def initialize
+    @ciphered = []
+  end
+
   def caesar_cipher(string, shift)
-    ciphered = []
     string = string.split('')
     string.each do |character|
       # Wrap upcase character from Z to A if needed
@@ -14,9 +17,8 @@ class CaesarCipher
       else
         cipher_num = character.ord
       end
-      ciphered << cipher_num.chr
+      @ciphered << cipher_num.chr
     end
-    ciphered.join
+    @ciphered.join
   end
 end
-

@@ -1,3 +1,4 @@
-require 'lib/caesarCipher'
+require_relative 'lib/caesarCipher'
 
-puts caesar_cipher(gets.chomp, gets.chomp.to_i)
+cipher = CaesarCipher.new
+puts cipher.caesar_cipher(gets.chomp, gets.chomp.to_i)
